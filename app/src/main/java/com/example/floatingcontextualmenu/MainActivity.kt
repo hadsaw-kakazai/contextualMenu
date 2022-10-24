@@ -1,5 +1,6 @@
 package com.example.floatingcontextualmenu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
@@ -30,5 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         menuInflater.inflate(R.menu.float_menu,menu)
         super.onCreateContextMenu(menu, v, menuInfo)
+    }
+
+    fun nextScreen(view:View){
+        val intent : Intent = Intent(this,parttwo::class.java)
+        startActivity(intent)
+
     }
 }
